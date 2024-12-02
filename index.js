@@ -29,7 +29,7 @@ app.get('/membership-discount',(req,res) => {
 });
 
 //here
-function getTax(cartTotal) => {
+function getTax(cartTotal) {
   let something = cartTotal*5/100;
   return something.toString();
 }
@@ -38,7 +38,7 @@ app.get('/calculate-tax',(req,res) => {
   res.send(getTax(cartTotal));
 });
 
-function getTime(dist,s) =>{
+function getTime(dist,s){
   if(s=='standard'){
     return dist/50;
   }else{
